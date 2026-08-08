@@ -11,6 +11,9 @@
     "signIn": "ورود",
     "openApp": "باز کردن برنامه"
   },
+  "settings": {
+    "label": "تنظیمات"
+  },
   "theme": {
     "label": "پوسته",
     "system": "سیستم",

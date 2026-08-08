@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../auth/AuthProvider'
-import { LanguageSwitcher } from '../components/LanguageSwitcher'
-import { ThemeSwitcher } from '../components/ThemeSwitcher'
+import { SettingsMenu } from '../components/SettingsMenu'
 
 export function AppHomePage() {
   const { t } = useTranslation()
@@ -19,8 +18,7 @@ export function AppHomePage() {
             {t('app.name')}
           </Link>
           <div className="site-actions">
-            <ThemeSwitcher compact />
-            <LanguageSwitcher compact />
+            <SettingsMenu />
             <button type="button" className="button button-ghost" onClick={() => void signOut()}>
               {t('appHome.signOut')}
             </button>

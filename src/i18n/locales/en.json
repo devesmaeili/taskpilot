@@ -11,6 +11,9 @@
     "signIn": "Sign in",
     "openApp": "Open app"
   },
+  "settings": {
+    "label": "Settings"
+  },
   "theme": {
     "label": "Theme",
     "system": "System",

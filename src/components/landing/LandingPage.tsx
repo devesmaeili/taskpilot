@@ -2,8 +2,7 @@ import type { CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../../auth/AuthProvider'
-import { LanguageSwitcher } from '../LanguageSwitcher'
-import { ThemeSwitcher } from '../ThemeSwitcher'
+import { SettingsMenu } from '../SettingsMenu'
 import { HeroMock } from './HeroMock'
 import { HeroVisual } from './HeroVisual'
 
@@ -39,8 +38,7 @@ export function LandingPage() {
           </nav>
 
           <div className="site-actions">
-            <ThemeSwitcher compact />
-            <LanguageSwitcher compact />
+            <SettingsMenu />
             {user ? (
               <Link className="button button-primary" to="/app">
                 {t('nav.openApp')}
@@ -167,8 +165,7 @@ export function LandingPage() {
           <p className="footer-brand">{t('app.name')}</p>
           <p>{t('footer.rights')}</p>
           <div className="footer-controls">
-            <ThemeSwitcher compact />
-            <LanguageSwitcher compact />
+            <SettingsMenu />
           </div>
         </div>
       </footer>

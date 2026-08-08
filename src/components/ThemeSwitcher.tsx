@@ -3,32 +3,9 @@ import { useTheme, type Theme } from '../theme/ThemeProvider'
 
 const themes: Theme[] = ['system', 'light', 'dark']
 
-type ThemeSwitcherProps = {
-  compact?: boolean
-}
-
-export function ThemeSwitcher({ compact = false }: ThemeSwitcherProps) {
+export function ThemeSwitcher() {
   const { t } = useTranslation()
   const { theme, setTheme } = useTheme()
-
-  if (compact) {
-    return (
-      <label className="nav-select">
-        <span className="visually-hidden">{t('theme.label')}</span>
-        <select
-          value={theme}
-          aria-label={t('theme.label')}
-          onChange={(event) => setTheme(event.target.value as Theme)}
-        >
-          {themes.map((option) => (
-            <option key={option} value={option}>
-              {t(`theme.${option}`)}
-            </option>
-          ))}
-        </select>
-      </label>
-    )
-  }
 
   return (
     <fieldset className="preference-group">

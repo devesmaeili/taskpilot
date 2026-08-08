@@ -3,8 +3,7 @@ import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { FirebaseError } from 'firebase/app'
 import { useAuth, type SocialProvider } from '../../auth/AuthProvider'
-import { LanguageSwitcher } from '../LanguageSwitcher'
-import { ThemeSwitcher } from '../ThemeSwitcher'
+import { SettingsMenu } from '../SettingsMenu'
 import { SocialAuthButtons } from './SocialAuthButtons'
 
 type AuthMode = 'signin' | 'signup'
@@ -81,8 +80,7 @@ export function AuthPage({ mode }: AuthPageProps) {
           {t('app.name')}
         </Link>
         <div className="site-actions">
-          <ThemeSwitcher compact />
-          <LanguageSwitcher compact />
+          <SettingsMenu />
         </div>
       </header>
 

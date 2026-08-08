@@ -163,17 +163,100 @@ select {
   margin-inline-start: auto;
 }
 
-.nav-select select {
-  appearance: none;
+.settings-menu {
+  position: relative;
+}
+
+.settings-menu-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
   border: 1px solid var(--border);
-  background:
-    linear-gradient(45deg, transparent 50%, var(--text-muted) 50%) calc(100% - 14px) / 5px 5px no-repeat,
-    linear-gradient(135deg, var(--text-muted) 50%, transparent 50%) calc(100% - 9px) / 5px 5px no-repeat,
-    var(--bg-elevated);
+  border-radius: 0.7rem;
+  background: var(--bg-elevated);
   color: var(--text);
-  border-radius: 0.55rem;
-  padding: 0.45rem 1.8rem 0.45rem 0.7rem;
   cursor: pointer;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.settings-menu-trigger:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+}
+
+.settings-menu-trigger[aria-expanded='true'] {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.settings-menu-trigger svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.settings-menu-panel {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  inset-inline-end: 0;
+  z-index: 40;
+  width: min(calc(100vw - 2rem), 22rem);
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.preference-group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.preference-group legend {
+  padding: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.segmented-control {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.3rem;
+  background: var(--control-bg);
+  border-radius: 0.75rem;
+}
+
+.segmented-control button {
+  appearance: none;
+  border: 0;
+  border-radius: 0.55rem;
+  padding: 0.55rem 0.75rem;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.segmented-control button.is-active {
+  background: var(--control-active);
+  color: var(--accent-contrast);
 }
 
 .button {
@@ -714,10 +797,6 @@ select {
     gap: 0.4rem;
   }
 
-  .nav-select select {
-    max-width: 7.5rem;
-  }
-
   .hero-actions {
     display: grid;
   }
@@ -747,7 +826,8 @@ select {
     animation: none;
   }
 
-  .button:hover {
+  .button:hover,
+  .settings-menu-trigger:hover {
     transform: none;
   }
 }
