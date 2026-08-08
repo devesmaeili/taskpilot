@@ -1,0 +1,113 @@
+{
+  "app": {
+    "name": "TaskPilot",
+    "tagline": "Personalized AI workflows without writing prompts."
+  },
+  "nav": {
+    "how": "How it works",
+    "automations": "Automations",
+    "chat": "AI Chat",
+    "getStarted": "Get started",
+    "signIn": "Sign in"
+  },
+  "theme": {
+    "label": "Theme",
+    "system": "System",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "language": {
+    "label": "Language"
+  },
+  "hero": {
+    "headline": "Your recurring AI work, done for you.",
+    "supporting": "Answer a few questions, pick a schedule, and TaskPilot runs personalized assistants in the background.",
+    "primaryCta": "Start automating",
+    "secondaryCta": "See how it works",
+    "mock": {
+      "workflow": "Workflow",
+      "automationTitle": "German Learning",
+      "automationMeta": "Daily · 07:30 · Email",
+      "chipLevel": "Level A2 → B1 · 20 min",
+      "chipFocus": "Focus: listening + grammar",
+      "chipMemory": "Memory: weak articles",
+      "running": "Running today"
+    }
+  },
+  "problem": {
+    "title": "Stop repeating the same AI tasks",
+    "supporting": "People rewrite the same prompts every day—lessons, news digests, searches, prep. Context gets lost. Effort repeats.",
+    "examplesTitle": "Familiar loops",
+    "examples": [
+      "Generate my German lesson",
+      "Summarize today's AI news",
+      "Find apartments in my budget",
+      "Review the latest market changes"
+    ]
+  },
+  "how": {
+    "title": "Four steps. Nothing else.",
+    "supporting": "Every workflow follows the same simple process. Complexity stays behind the scenes.",
+    "steps": [
+      {
+        "title": "Select a category",
+        "description": "Choose what you want automated—learning, newsletters, and more."
+      },
+      {
+        "title": "Answer a few questions",
+        "description": "A short questionnaire replaces prompt engineering entirely."
+      },
+      {
+        "title": "Choose when it runs",
+        "description": "Hourly, daily, weekly, monthly, or on demand."
+      },
+      {
+        "title": "Activate",
+        "description": "TaskPilot generates prompts, executes, learns, and notifies you."
+      }
+    ]
+  },
+  "products": {
+    "title": "Two products. One memory.",
+    "supporting": "Automations and chat share your profile and long-term context, so everything feels personal.",
+    "automations": {
+      "title": "AI Automations",
+      "description": "Recurring workflows that run on a schedule or trigger—lessons, digests, searches—without you opening a chat."
+    },
+    "chat": {
+      "title": "AI Chat",
+      "description": "A ChatGPT-like space for questions, brainstorming, and help—with the model you prefer."
+    }
+  },
+  "categories": {
+    "title": "Start with learning",
+    "supporting": "Phase one focuses on learning automations. More categories plug in without changing how you use the product.",
+    "items": [
+      {
+        "title": "Language learning",
+        "description": "German, English, and more—matched to level, goals, and study time."
+      },
+      {
+        "title": "AI & tech newsletters",
+        "description": "Topic-focused digests at the length and frequency you want."
+      },
+      {
+        "title": "Programming learning",
+        "description": "Guided practice around the stack and weekly hours you set."
+      }
+    ],
+    "coming": "Next up: real estate search, travel, fitness, job search, and more."
+  },
+  "memory": {
+    "title": "It remembers what matters",
+    "supporting": "TaskPilot stores useful preferences from chats and runs—weak grammar topics, favorite neighborhoods, preferred summary length—and uses them next time."
+  },
+  "cta": {
+    "title": "Let TaskPilot work in the background",
+    "supporting": "Choose a category. Answer a few questions. Select a schedule. Then get back to your day.",
+    "button": "Create your first assistant"
+  },
+  "footer": {
+    "rights": "AI automation for everyone—no prompt engineering required."
+  }
+}

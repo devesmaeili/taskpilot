@@ -1,0 +1,113 @@
+{
+  "app": {
+    "name": "TaskPilot",
+    "tagline": "Personalisierte KI-Workflows ohne Prompt-Schreiben."
+  },
+  "nav": {
+    "how": "So funktioniert's",
+    "automations": "Automatisierungen",
+    "chat": "KI-Chat",
+    "getStarted": "Loslegen",
+    "signIn": "Anmelden"
+  },
+  "theme": {
+    "label": "Design",
+    "system": "System",
+    "light": "Hell",
+    "dark": "Dunkel"
+  },
+  "language": {
+    "label": "Sprache"
+  },
+  "hero": {
+    "headline": "Ihre wiederkehrende KI-Arbeit erledigt sich von selbst.",
+    "supporting": "Beantworten Sie ein paar Fragen, wählen Sie einen Zeitplan, und TaskPilot führt personalisierte Assistenten im Hintergrund aus.",
+    "primaryCta": "Jetzt automatisieren",
+    "secondaryCta": "So funktioniert's",
+    "mock": {
+      "workflow": "Workflow",
+      "automationTitle": "Deutsch lernen",
+      "automationMeta": "Täglich · 07:30 · E-Mail",
+      "chipLevel": "Niveau A2 → B1 · 20 Min.",
+      "chipFocus": "Fokus: Hören + Grammatik",
+      "chipMemory": "Gedächtnis: schwache Artikel",
+      "running": "Läuft heute"
+    }
+  },
+  "problem": {
+    "title": "Hören Sie auf, dieselben KI-Aufgaben zu wiederholen",
+    "supporting": "Jeden Tag dieselben Prompts neu schreiben—Lektionen, News, Suche, Vorbereitung. Kontext geht verloren. Aufwand wiederholt sich.",
+    "examplesTitle": "Bekannte Schleifen",
+    "examples": [
+      "Erstelle meine Deutschstunde",
+      "Fasse die heutigen KI-News zusammen",
+      "Finde Wohnungen in meinem Budget",
+      "Prüfe die aktuellen Marktänderungen"
+    ]
+  },
+  "how": {
+    "title": "Vier Schritte. Mehr nicht.",
+    "supporting": "Jeder Workflow folgt demselben einfachen Prozess. Die Komplexität bleibt hinter der Oberfläche.",
+    "steps": [
+      {
+        "title": "Kategorie wählen",
+        "description": "Wählen Sie, was automatisiert werden soll—Lernen, Newsletter und mehr."
+      },
+      {
+        "title": "Ein paar Fragen beantworten",
+        "description": "Ein kurzer Fragebogen ersetzt Prompt Engineering komplett."
+      },
+      {
+        "title": "Zeitpunkt festlegen",
+        "description": "Stündlich, täglich, wöchentlich, monatlich oder bei Bedarf."
+      },
+      {
+        "title": "Aktivieren",
+        "description": "TaskPilot erzeugt Prompts, führt aus, lernt und benachrichtigt Sie."
+      }
+    ]
+  },
+  "products": {
+    "title": "Zwei Produkte. Ein Gedächtnis.",
+    "supporting": "Automatisierungen und Chat teilen Profil und Langzeitgedächtnis—alles fühlt sich persönlich an.",
+    "automations": {
+      "title": "KI-Automatisierungen",
+      "description": "Wiederkehrende Workflows nach Zeitplan oder Trigger—Lektionen, Digests, Suche—ohne Chat zu öffnen."
+    },
+    "chat": {
+      "title": "KI-Chat",
+      "description": "Ein ChatGPT-ähnlicher Raum für Fragen, Ideen und Hilfe—mit dem Modell Ihrer Wahl."
+    }
+  },
+  "categories": {
+    "title": "Start mit Lernen",
+    "supporting": "Phase eins konzentriert sich auf Lern-Automatisierungen. Weitere Kategorien lassen sich ohne neue Bedienung ergänzen.",
+    "items": [
+      {
+        "title": "Sprachen lernen",
+        "description": "Deutsch, Englisch und mehr—passend zu Niveau, Zielen und Lernzeit."
+      },
+      {
+        "title": "KI- & Tech-Newsletter",
+        "description": "Themenbezogene Digests in der Länge und Häufigkeit, die Sie wollen."
+      },
+      {
+        "title": "Programmieren lernen",
+        "description": "Geführtes Üben rund um Stack und wöchentliche Stunden."
+      }
+    ],
+    "coming": "Als Nächstes: Immobiliensuche, Reisen, Fitness, Jobsuche und mehr."
+  },
+  "memory": {
+    "title": "Es merkt sich, was zählt",
+    "supporting": "TaskPilot speichert nützliche Vorlieben aus Chats und Läufen—schwache Grammatikthemen, Lieblingsviertel, bevorzugte Zusammenfassungslänge—und nutzt sie beim nächsten Mal."
+  },
+  "cta": {
+    "title": "Lassen Sie TaskPilot im Hintergrund arbeiten",
+    "supporting": "Kategorie wählen. Ein paar Fragen beantworten. Zeitplan festlegen. Dann zurück in Ihren Tag.",
+    "button": "Ersten Assistenten erstellen"
+  },
+  "footer": {
+    "rights": "KI-Automatisierung für alle—ohne Prompt Engineering."
+  }
+}
