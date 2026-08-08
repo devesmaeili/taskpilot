@@ -8,7 +8,8 @@
     "automations": "Automations",
     "chat": "AI Chat",
     "getStarted": "Get started",
-    "signIn": "Sign in"
+    "signIn": "Sign in",
+    "openApp": "Open app"
   },
   "theme": {
     "label": "Theme",
@@ -109,5 +110,46 @@
   },
   "footer": {
     "rights": "AI automation for everyone—no prompt engineering required."
+  },
+  "auth": {
+    "signInTitle": "Welcome back",
+    "signUpTitle": "Create your account",
+    "signInSupporting": "Sign in to manage automations, chat, and your personal memory.",
+    "signUpSupporting": "Start with Google or another provider—or use email. No prompt engineering required.",
+    "orEmail": "Or continue with email",
+    "displayName": "Name",
+    "email": "Email",
+    "password": "Password",
+    "signInCta": "Sign in",
+    "signUpCta": "Create account",
+    "working": "Please wait…",
+    "noAccount": "New to TaskPilot?",
+    "hasAccount": "Already have an account?",
+    "goSignUp": "Create an account",
+    "goSignIn": "Sign in",
+    "notConfigured": "Firebase is not configured yet. Copy .env.example to .env and add your Firebase web app keys, then enable providers in the Firebase console.",
+    "providers": {
+      "google": "Continue with Google",
+      "github": "Continue with GitHub",
+      "microsoft": "Continue with Microsoft",
+      "apple": "Continue with Apple"
+    },
+    "errors": {
+      "generic": "Something went wrong. Please try again.",
+      "emailInUse": "An account already exists with this email.",
+      "invalidCredentials": "Email or password is incorrect.",
+      "weakPassword": "Password must be at least 6 characters.",
+      "popupClosed": "Sign-in popup was closed before completing.",
+      "accountExists": "An account already exists with this email using a different sign-in method.",
+      "unauthorizedDomain": "This domain is not authorized in Firebase Authentication settings.",
+      "providerDisabled": "This sign-in method is not enabled in the Firebase console yet."
+    }
+  },
+  "appHome": {
+    "kicker": "Signed in",
+    "title": "Hi, {{name}}",
+    "supporting": "Your automations and chat will live here. Auth is ready—build the dashboard next.",
+    "signOut": "Sign out",
+    "anonymousUser": "there"
   }
 }

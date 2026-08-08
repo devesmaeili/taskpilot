@@ -8,7 +8,8 @@
     "automations": "Automatisierungen",
     "chat": "KI-Chat",
     "getStarted": "Loslegen",
-    "signIn": "Anmelden"
+    "signIn": "Anmelden",
+    "openApp": "App öffnen"
   },
   "theme": {
     "label": "Design",
@@ -109,5 +110,46 @@
   },
   "footer": {
     "rights": "KI-Automatisierung für alle—ohne Prompt Engineering."
+  },
+  "auth": {
+    "signInTitle": "Willkommen zurück",
+    "signUpTitle": "Konto erstellen",
+    "signInSupporting": "Melden Sie sich an, um Automatisierungen, Chat und Ihr persönliches Gedächtnis zu verwalten.",
+    "signUpSupporting": "Starten Sie mit Google oder einem anderen Anbieter—oder per E-Mail. Kein Prompt Engineering nötig.",
+    "orEmail": "Oder mit E-Mail fortfahren",
+    "displayName": "Name",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "signInCta": "Anmelden",
+    "signUpCta": "Konto erstellen",
+    "working": "Bitte warten…",
+    "noAccount": "Neu bei TaskPilot?",
+    "hasAccount": "Haben Sie schon ein Konto?",
+    "goSignUp": "Konto erstellen",
+    "goSignIn": "Anmelden",
+    "notConfigured": "Firebase ist noch nicht konfiguriert. Kopieren Sie .env.example nach .env, tragen Sie Ihre Firebase-Web-App-Schlüssel ein und aktivieren Sie die Anbieter in der Firebase-Konsole.",
+    "providers": {
+      "google": "Weiter mit Google",
+      "github": "Weiter mit GitHub",
+      "microsoft": "Weiter mit Microsoft",
+      "apple": "Weiter mit Apple"
+    },
+    "errors": {
+      "generic": "Etwas ist schiefgelaufen. Bitte erneut versuchen.",
+      "emailInUse": "Mit dieser E-Mail existiert bereits ein Konto.",
+      "invalidCredentials": "E-Mail oder Passwort ist falsch.",
+      "weakPassword": "Das Passwort muss mindestens 6 Zeichen haben.",
+      "popupClosed": "Das Anmelde-Popup wurde vor Abschluss geschlossen.",
+      "accountExists": "Mit dieser E-Mail existiert bereits ein Konto über eine andere Anmeldemethode.",
+      "unauthorizedDomain": "Diese Domain ist in den Firebase-Authentication-Einstellungen nicht autorisiert.",
+      "providerDisabled": "Diese Anmeldemethode ist in der Firebase-Konsole noch nicht aktiviert."
+    }
+  },
+  "appHome": {
+    "kicker": "Angemeldet",
+    "title": "Hallo, {{name}}",
+    "supporting": "Ihre Automatisierungen und der Chat kommen hierher. Auth ist bereit—als Nächstes das Dashboard.",
+    "signOut": "Abmelden",
+    "anonymousUser": "dort"
   }
 }

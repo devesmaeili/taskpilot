@@ -9,6 +9,19 @@
       content="TaskPilot turns a few questions into personalized AI automations and chat—no prompt engineering required."
     />
     <title>TaskPilot — AI Automation Platform</title>
+    <script>
+      (function () {
+        try {
+          var redirect = sessionStorage.getItem('taskpilot-spa-redirect')
+          if (redirect) {
+            sessionStorage.removeItem('taskpilot-spa-redirect')
+            if (redirect !== location.pathname + location.search + location.hash) {
+              history.replaceState(null, '', redirect)
+            }
+          }
+        } catch (e) {}
+      })()
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

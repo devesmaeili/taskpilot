@@ -8,7 +8,8 @@
     "automations": "اتوماسیون‌ها",
     "chat": "چت هوش مصنوعی",
     "getStarted": "شروع کنید",
-    "signIn": "ورود"
+    "signIn": "ورود",
+    "openApp": "باز کردن برنامه"
   },
   "theme": {
     "label": "پوسته",
@@ -109,5 +110,46 @@
   },
   "footer": {
     "rights": "اتوماسیون هوش مصنوعی برای همه—بدون مهندسی پرامپت."
+  },
+  "auth": {
+    "signInTitle": "خوش آمدید",
+    "signUpTitle": "ساخت حساب",
+    "signInSupporting": "وارد شوید تا اتوماسیون‌ها، چت و حافظه شخصی خود را مدیریت کنید.",
+    "signUpSupporting": "با گوگل یا ارائه‌دهنده دیگر شروع کنید—یا با ایمیل. بدون نیاز به مهندسی پرامپت.",
+    "orEmail": "یا با ایمیل ادامه دهید",
+    "displayName": "نام",
+    "email": "ایمیل",
+    "password": "رمز عبور",
+    "signInCta": "ورود",
+    "signUpCta": "ساخت حساب",
+    "working": "لطفاً صبر کنید…",
+    "noAccount": "تازه با TaskPilot آشنا شده‌اید؟",
+    "hasAccount": "از قبل حساب دارید؟",
+    "goSignUp": "ساخت حساب",
+    "goSignIn": "ورود",
+    "notConfigured": "Firebase هنوز پیکربندی نشده است. فایل .env.example را به .env کپی کنید، کلیدهای وب‌اپ Firebase را وارد کنید و ارائه‌دهنده‌ها را در کنسول Firebase فعال کنید.",
+    "providers": {
+      "google": "ادامه با گوگل",
+      "github": "ادامه با GitHub",
+      "microsoft": "ادامه با مایکروسافت",
+      "apple": "ادامه با اپل"
+    },
+    "errors": {
+      "generic": "مشکلی پیش آمد. دوباره تلاش کنید.",
+      "emailInUse": "حسابی با این ایمیل از قبل وجود دارد.",
+      "invalidCredentials": "ایمیل یا رمز عبور نادرست است.",
+      "weakPassword": "رمز عبور باید حداقل ۶ کاراکتر باشد.",
+      "popupClosed": "پنجره ورود قبل از اتمام بسته شد.",
+      "accountExists": "حسابی با این ایمیل از طریق روش ورود دیگری وجود دارد.",
+      "unauthorizedDomain": "این دامنه در تنظیمات Firebase Authentication مجاز نیست.",
+      "providerDisabled": "این روش ورود هنوز در کنسول Firebase فعال نشده است."
+    }
+  },
+  "appHome": {
+    "kicker": "وارد شده",
+    "title": "سلام، {{name}}",
+    "supporting": "اتوماسیون‌ها و چت اینجا خواهند بود. احراز هویت آماده است—بعداً داشبورد را می‌سازیم.",
+    "signOut": "خروج",
+    "anonymousUser": "دوست"
   }
 }

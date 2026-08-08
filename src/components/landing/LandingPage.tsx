@@ -1,5 +1,7 @@
 import type { CSSProperties } from 'react'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { useAuth } from '../../auth/AuthProvider'
 import { LanguageSwitcher } from '../LanguageSwitcher'
 import { ThemeSwitcher } from '../ThemeSwitcher'
 import { HeroMock } from './HeroMock'
@@ -17,6 +19,7 @@ type Category = {
 
 export function LandingPage() {
   const { t } = useTranslation()
+  const { user } = useAuth()
   const steps = t('how.steps', { returnObjects: true }) as Step[]
   const examples = t('problem.examples', { returnObjects: true }) as string[]
   const categories = t('categories.items', { returnObjects: true }) as Category[]
@@ -38,12 +41,20 @@ export function LandingPage() {
           <div className="site-actions">
             <ThemeSwitcher compact />
             <LanguageSwitcher compact />
-            <a className="button button-ghost" href="#cta">
-              {t('nav.signIn')}
-            </a>
-            <a className="button button-primary" href="#cta">
-              {t('nav.getStarted')}
-            </a>
+            {user ? (
+              <Link className="button button-primary" to="/app">
+                {t('nav.openApp')}
+              </Link>
+            ) : (
+              <>
+                <Link className="button button-ghost" to="/signin">
+                  {t('nav.signIn')}
+                </Link>
+                <Link className="button button-primary" to="/signup">
+                  {t('nav.getStarted')}
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </header>
@@ -57,9 +68,9 @@ export function LandingPage() {
               <h1>{t('hero.headline')}</h1>
               <p className="hero-supporting">{t('hero.supporting')}</p>
               <div className="hero-actions">
-                <a className="button button-primary button-lg" href="#cta">
+                <Link className="button button-primary button-lg" to={user ? '/app' : '/signup'}>
                   {t('hero.primaryCta')}
-                </a>
+                </Link>
                 <a className="button button-ghost button-lg" href="#how">
                   {t('hero.secondaryCta')}
                 </a>
@@ -144,9 +155,9 @@ export function LandingPage() {
           <div className="section-inner">
             <h2>{t('cta.title')}</h2>
             <p className="section-supporting">{t('cta.supporting')}</p>
-            <a className="button button-primary button-lg" href="#top">
+            <Link className="button button-primary button-lg" to={user ? '/app' : '/signup'}>
               {t('cta.button')}
-            </a>
+            </Link>
           </div>
         </section>
       </main>

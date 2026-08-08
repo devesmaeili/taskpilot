@@ -751,3 +751,194 @@ select {
     transform: none;
   }
 }
+
+/* Auth */
+
+.auth-loading,
+.app-home,
+.auth-page {
+  min-height: 100vh;
+}
+
+.auth-loading {
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+}
+
+.auth-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--content-width);
+  margin-inline: auto;
+  padding: 1rem 0;
+}
+
+.auth-main {
+  display: grid;
+  place-items: center;
+  padding: 1rem 1.25rem 3rem;
+}
+
+.auth-card {
+  width: min(100%, 440px);
+  padding: 1.75rem;
+  background: color-mix(in srgb, var(--bg-elevated) 94%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.auth-kicker {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--accent);
+}
+
+.auth-card h1,
+.app-home-main h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.auth-supporting {
+  margin: 0.75rem 0 0;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.auth-banner,
+.auth-error {
+  margin: 1rem 0 0;
+  padding: 0.85rem 0.95rem;
+  border-radius: 0.75rem;
+  line-height: 1.45;
+  font-size: 0.95rem;
+}
+
+.auth-banner {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--text);
+}
+
+.auth-error {
+  background: color-mix(in srgb, #c2410c 16%, transparent);
+  color: var(--text);
+}
+
+.social-auth {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+}
+
+.social-auth-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--bg-elevated);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 600;
+  text-align: start;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.social-auth-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+}
+
+.social-auth-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.social-auth-button svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex: 0 0 auto;
+}
+
+.auth-divider {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.35rem 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  height: 1px;
+  background: var(--border);
+}
+
+.auth-form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.auth-field {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.auth-field input {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.auth-field input:focus {
+  outline: 2px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  outline-offset: 1px;
+}
+
+.auth-submit {
+  width: 100%;
+  margin-top: 0.35rem;
+}
+
+.auth-switch {
+  margin: 1.25rem 0 0;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.auth-switch a {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.app-home-main {
+  padding: 3rem 0 4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-auth-button:hover:not(:disabled) {
+    transform: none;
+  }
+}
