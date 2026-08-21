@@ -149,10 +149,73 @@
     }
   },
   "appHome": {
-    "kicker": "Signed in",
-    "title": "Hi, {{name}}",
-    "supporting": "Your automations and chat will live here. Auth is ready—build the dashboard next.",
     "signOut": "Sign out",
     "anonymousUser": "there"
+  },
+  "userMenu": {
+    "label": "Account menu",
+    "profile": "User profile",
+    "signOut": "Sign out"
+  },
+  "profile": {
+    "kicker": "Account",
+    "title": "User profile",
+    "supporting": "Your TaskPilot account details.",
+    "name": "Name",
+    "email": "Email",
+    "userId": "User ID",
+    "noEmail": "No email on this account"
+  },
+  "appNav": {
+    "label": "App sections",
+    "chat": "Talk to TaskPilot",
+    "automations": "Create automation"
+  },
+  "chat": {
+    "kicker": "AI chat",
+    "title": "Talk to TaskPilot",
+    "history": "History",
+    "historyEmpty": "No conversations yet.",
+    "newChat": "New chat",
+    "deleteChat": "Delete conversation",
+    "closeHistory": "Close history",
+    "empty": "Send a message to start the conversation.",
+    "placeholder": "Message TaskPilot…",
+    "send": "Send",
+    "sending": "Sending…",
+    "thinking": "Thinking…",
+    "you": "You",
+    "assistant": "TaskPilot",
+    "notConfigured": "Add VITE_GEMINI_API_KEY and/or VITE_OPENROUTER_API_KEY to your .env file, then restart the dev server.",
+    "models": {
+      "label": "Model",
+      "groupsLabel": "AI providers",
+      "unknown": "Select a model",
+      "freeBadge": "Free",
+      "loadingFree": "Loading free models…",
+      "freeHint": "{{count}} free models available (final catalog).",
+      "needGemini": "Requires VITE_GEMINI_API_KEY",
+      "needOpenRouter": "Requires VITE_OPENROUTER_API_KEY from openrouter.ai",
+      "groups": {
+        "chatgpt": "ChatGPT",
+        "gemini": "Gemini",
+        "claude": "Claude",
+        "free": "Free models"
+      },
+      "groupHints": {
+        "chatgpt": "OpenAI ChatGPT models via OpenRouter.",
+        "gemini": "Google Gemini — direct key or OpenRouter.",
+        "claude": "Anthropic Claude models via OpenRouter."
+      }
+    },
+    "errors": {
+      "generic": "Something went wrong. Please try again."
+    }
+  },
+  "automations": {
+    "kicker": "Automations",
+    "title": "Create an automation",
+    "supporting": "Turn a few answers into a scheduled AI workflow.",
+    "comingSoon": "This section is coming next. For now, use Talk to TaskPilot."
   }
 }

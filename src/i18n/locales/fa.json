@@ -149,10 +149,73 @@
     }
   },
   "appHome": {
-    "kicker": "وارد شده",
-    "title": "سلام، {{name}}",
-    "supporting": "اتوماسیون‌ها و چت اینجا خواهند بود. احراز هویت آماده است—بعداً داشبورد را می‌سازیم.",
     "signOut": "خروج",
     "anonymousUser": "دوست"
+  },
+  "userMenu": {
+    "label": "منوی حساب",
+    "profile": "پروفایل کاربر",
+    "signOut": "خروج"
+  },
+  "profile": {
+    "kicker": "حساب",
+    "title": "پروفایل کاربر",
+    "supporting": "جزئیات حساب TaskPilot شما.",
+    "name": "نام",
+    "email": "ایمیل",
+    "userId": "شناسه کاربر",
+    "noEmail": "ایمیلی برای این حساب نیست"
+  },
+  "appNav": {
+    "label": "بخش‌های برنامه",
+    "chat": "گفتگو با TaskPilot",
+    "automations": "ساخت اتوماسیون"
+  },
+  "chat": {
+    "kicker": "چت هوش مصنوعی",
+    "title": "گفتگو با TaskPilot",
+    "history": "تاریخچه",
+    "historyEmpty": "هنوز گفتگویی نیست.",
+    "newChat": "گفتگوی جدید",
+    "deleteChat": "حذف گفتگو",
+    "closeHistory": "بستن تاریخچه",
+    "empty": "برای شروع یک پیام بفرستید.",
+    "placeholder": "پیام به TaskPilot…",
+    "send": "ارسال",
+    "sending": "در حال ارسال…",
+    "thinking": "در حال فکر کردن…",
+    "you": "شما",
+    "assistant": "TaskPilot",
+    "notConfigured": "VITE_GEMINI_API_KEY و/یا VITE_OPENROUTER_API_KEY را به فایل .env اضافه کنید، سپس سرور توسعه را دوباره اجرا کنید.",
+    "models": {
+      "label": "مدل",
+      "groupsLabel": "ارائه‌دهندگان هوش مصنوعی",
+      "unknown": "یک مدل انتخاب کنید",
+      "freeBadge": "رایگان",
+      "loadingFree": "در حال بارگذاری مدل‌های رایگان…",
+      "freeHint": "{{count}} مدل رایگان در دسترس است (فهرست نهایی).",
+      "needGemini": "به VITE_GEMINI_API_KEY نیاز دارد",
+      "needOpenRouter": "به VITE_OPENROUTER_API_KEY از openrouter.ai نیاز دارد",
+      "groups": {
+        "chatgpt": "ChatGPT",
+        "gemini": "Gemini",
+        "claude": "Claude",
+        "free": "مدل‌های رایگان"
+      },
+      "groupHints": {
+        "chatgpt": "مدل‌های ChatGPT از OpenAI از طریق OpenRouter.",
+        "gemini": "گوگل جمینای — کلید مستقیم یا OpenRouter.",
+        "claude": "مدل‌های Claude از Anthropic از طریق OpenRouter."
+      }
+    },
+    "errors": {
+      "generic": "مشکلی پیش آمد. لطفاً دوباره تلاش کنید."
+    }
+  },
+  "automations": {
+    "kicker": "اتوماسیون‌ها",
+    "title": "ساخت اتوماسیون",
+    "supporting": "با چند پاسخ، یک جریان کاری زمان‌بندی‌شده بسازید.",
+    "comingSoon": "این بخش به‌زودی می‌آید. فعلاً از گفتگو با TaskPilot استفاده کنید."
   }
 }

@@ -149,10 +149,73 @@
     }
   },
   "appHome": {
-    "kicker": "Angemeldet",
-    "title": "Hallo, {{name}}",
-    "supporting": "Ihre Automatisierungen und der Chat kommen hierher. Auth ist bereit—als Nächstes das Dashboard.",
     "signOut": "Abmelden",
     "anonymousUser": "dort"
+  },
+  "userMenu": {
+    "label": "Kontomenü",
+    "profile": "Benutzerprofil",
+    "signOut": "Abmelden"
+  },
+  "profile": {
+    "kicker": "Konto",
+    "title": "Benutzerprofil",
+    "supporting": "Ihre TaskPilot-Kontodaten.",
+    "name": "Name",
+    "email": "E-Mail",
+    "userId": "Benutzer-ID",
+    "noEmail": "Keine E-Mail für dieses Konto"
+  },
+  "appNav": {
+    "label": "App-Bereiche",
+    "chat": "Mit TaskPilot sprechen",
+    "automations": "Automatisierung erstellen"
+  },
+  "chat": {
+    "kicker": "KI-Chat",
+    "title": "Mit TaskPilot sprechen",
+    "history": "Verlauf",
+    "historyEmpty": "Noch keine Unterhaltungen.",
+    "newChat": "Neuer Chat",
+    "deleteChat": "Unterhaltung löschen",
+    "closeHistory": "Verlauf schließen",
+    "empty": "Senden Sie eine Nachricht, um zu starten.",
+    "placeholder": "Nachricht an TaskPilot…",
+    "send": "Senden",
+    "sending": "Wird gesendet…",
+    "thinking": "Denkt nach…",
+    "you": "Sie",
+    "assistant": "TaskPilot",
+    "notConfigured": "Fügen Sie VITE_GEMINI_API_KEY und/oder VITE_OPENROUTER_API_KEY in Ihre .env-Datei ein und starten Sie den Dev-Server neu.",
+    "models": {
+      "label": "Modell",
+      "groupsLabel": "KI-Anbieter",
+      "unknown": "Modell wählen",
+      "freeBadge": "Kostenlos",
+      "loadingFree": "Kostenlose Modelle werden geladen…",
+      "freeHint": "{{count}} kostenlose Modelle verfügbar (finaler Katalog).",
+      "needGemini": "Benötigt VITE_GEMINI_API_KEY",
+      "needOpenRouter": "Benötigt VITE_OPENROUTER_API_KEY von openrouter.ai",
+      "groups": {
+        "chatgpt": "ChatGPT",
+        "gemini": "Gemini",
+        "claude": "Claude",
+        "free": "Kostenlose Modelle"
+      },
+      "groupHints": {
+        "chatgpt": "OpenAI ChatGPT-Modelle über OpenRouter.",
+        "gemini": "Google Gemini — direkter Schlüssel oder OpenRouter.",
+        "claude": "Anthropic Claude-Modelle über OpenRouter."
+      }
+    },
+    "errors": {
+      "generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "automations": {
+    "kicker": "Automatisierungen",
+    "title": "Automatisierung erstellen",
+    "supporting": "Aus wenigen Antworten wird ein geplanter KI-Workflow.",
+    "comingSoon": "Dieser Bereich kommt als Nächstes. Nutzen Sie vorerst Mit TaskPilot sprechen."
   }
 }

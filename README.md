@@ -12,6 +12,12 @@ npm run dev
 
 Fill `.env` with your Firebase web app config, then in the Firebase console enable Authentication providers (Email/Password, Google, GitHub, Microsoft, Apple) and add authorized domains (`localhost`, `devesmaeili.github.io`).
 
+For AI chat:
+- `VITE_GEMINI_API_KEY` from [Google AI Studio](https://aistudio.google.com/apikey) for direct Gemini
+- `VITE_OPENROUTER_API_KEY` from [OpenRouter](https://openrouter.ai/keys) for ChatGPT, Claude, Gemini, and the full free-model catalog
+
+Then restart the dev server.
+
 ## Features
 
 - **Themes**: system, light, and dark (preference persisted)
