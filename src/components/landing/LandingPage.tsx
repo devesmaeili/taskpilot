@@ -2,6 +2,10 @@ import type { CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../../auth/AuthProvider'
+import {
+  getTelegramConnectUrl,
+  isTelegramConfigured,
+} from '../../telegram'
 import { SettingsMenu } from '../SettingsMenu'
 import { UserMenu } from '../UserMenu'
 import { HeroMock } from './HeroMock'
@@ -23,6 +27,8 @@ export function LandingPage() {
   const steps = t('how.steps', { returnObjects: true }) as Step[]
   const examples = t('problem.examples', { returnObjects: true }) as string[]
   const categories = t('categories.items', { returnObjects: true }) as Category[]
+  const telegramConfigured = isTelegramConfigured()
+  const telegramUrl = getTelegramConnectUrl(user?.uid ? `link_${user.uid}` : undefined)
 
   return (
     <div className="landing">
@@ -35,6 +41,7 @@ export function LandingPage() {
           <nav className="site-nav" aria-label="Primary">
             <a href="#how">{t('nav.how')}</a>
             <a href="#products">{t('nav.automations')}</a>
+            <a href="#telegram">{t('nav.telegram')}</a>
             <a href="#products">{t('nav.chat')}</a>
           </nav>
 
@@ -153,6 +160,28 @@ export function LandingPage() {
           </div>
         </section>
 
+        <section className="section telegram" id="telegram">
+          <div className="section-inner telegram-inner">
+            <p className="telegram-kicker">{t('telegram.kicker')}</p>
+            <h2>{t('telegram.title')}</h2>
+            <p className="section-supporting">{t('telegram.supporting')}</p>
+            {telegramConfigured && telegramUrl ? (
+              <a
+                className="button button-primary button-lg telegram-connect"
+                href={telegramUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <TelegramIcon />
+                {t('telegram.connect')}
+              </a>
+            ) : (
+              <p className="auth-banner telegram-banner">{t('telegram.notConfigured')}</p>
+            )}
+            <p className="telegram-note">{t('telegram.note')}</p>
+          </div>
+        </section>
+
         <section className="section final-cta" id="cta">
           <div className="section-inner">
             <h2>{t('cta.title')}</h2>
@@ -174,5 +203,16 @@ export function LandingPage() {
         </div>
       </footer>
     </div>
+  )
+}
+
+function TelegramIcon() {
+  return (
+    <svg className="telegram-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="currentColor"
+        d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.788.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+      />
+    </svg>
   )
 }

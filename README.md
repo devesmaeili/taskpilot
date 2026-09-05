@@ -14,6 +14,8 @@ Fill `.env` with your Firebase web app config, then in the Firebase console enab
 
 For AI chat, add an OpenRouter API key from [OpenRouter](https://openrouter.ai/keys) as `VITE_OPENROUTER_API_KEY` (covers ChatGPT, Claude, Gemini, and free models), then restart the dev server.
 
+For the landing Telegram connect button, set `VITE_TELEGRAM_BOT_USERNAME` to your bot username (without `@`).
+
 ## Features
 
 - **Themes**: system, light, and dark (preference persisted)

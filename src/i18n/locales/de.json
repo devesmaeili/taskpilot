@@ -7,6 +7,7 @@
     "how": "So funktioniert's",
     "automations": "Automatisierungen",
     "chat": "KI-Chat",
+    "telegram": "Telegram",
     "getStarted": "Loslegen",
     "signIn": "Anmelden",
     "openApp": "App öffnen"
@@ -105,6 +106,14 @@
   "memory": {
     "title": "Es merkt sich, was zählt",
     "supporting": "TaskPilot speichert nützliche Vorlieben aus Chats und Läufen—schwache Grammatikthemen, Lieblingsviertel, bevorzugte Zusammenfassungslänge—und nutzt sie beim nächsten Mal."
+  },
+  "telegram": {
+    "kicker": "Benachrichtigungen",
+    "title": "Telegram verbinden",
+    "supporting": "Erhalten Sie Automatisierungsergebnisse und Erinnerungen in Telegram—ohne jedes Mal die App zu öffnen.",
+    "connect": "Telegram verbinden",
+    "note": "Öffnen Sie den TaskPilot-Bot, tippen Sie auf Start, und bleiben Sie für die Zustellung verbunden.",
+    "notConfigured": "Fügen Sie VITE_TELEGRAM_BOT_USERNAME in Ihre .env-Datei ein (Bot-Benutzername ohne @) und starten Sie den Dev-Server neu."
   },
   "cta": {
     "title": "Lassen Sie TaskPilot im Hintergrund arbeiten",

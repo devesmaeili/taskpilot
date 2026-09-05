@@ -7,6 +7,7 @@
     "how": "How it works",
     "automations": "Automations",
     "chat": "AI Chat",
+    "telegram": "Telegram",
     "getStarted": "Get started",
     "signIn": "Sign in",
     "openApp": "Open app"
@@ -105,6 +106,14 @@
   "memory": {
     "title": "It remembers what matters",
     "supporting": "TaskPilot stores useful preferences from chats and runs—weak grammar topics, favorite neighborhoods, preferred summary length—and uses them next time."
+  },
+  "telegram": {
+    "kicker": "Notifications",
+    "title": "Connect Telegram",
+    "supporting": "Get automation results and reminders in Telegram—without opening the app every time.",
+    "connect": "Connect Telegram",
+    "note": "Open the TaskPilot bot, tap Start, and stay linked for delivery.",
+    "notConfigured": "Add VITE_TELEGRAM_BOT_USERNAME to your .env file (your bot username without @), then restart the dev server."
   },
   "cta": {
     "title": "Let TaskPilot work in the background",
