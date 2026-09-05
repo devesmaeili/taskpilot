@@ -10,7 +10,7 @@ export function AppShell() {
     <div className="app-shell">
       <header className="app-shell-header">
         <div className="app-shell-header-inner">
-          <NavLink className="site-logo" to="/app/chat">
+          <NavLink className="site-logo" to="/">
             {t('app.name')}
           </NavLink>
 

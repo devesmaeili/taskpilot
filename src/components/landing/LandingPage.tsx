@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '../../auth/AuthProvider'
 import { SettingsMenu } from '../SettingsMenu'
+import { UserMenu } from '../UserMenu'
 import { HeroMock } from './HeroMock'
 import { HeroVisual } from './HeroVisual'
 
@@ -27,9 +28,9 @@ export function LandingPage() {
     <div className="landing">
       <header className="site-header">
         <div className="site-header-inner">
-          <a className="site-logo" href="#top">
+          <Link className="site-logo" to="/">
             {t('app.name')}
-          </a>
+          </Link>
 
           <nav className="site-nav" aria-label="Primary">
             <a href="#how">{t('nav.how')}</a>
@@ -40,9 +41,12 @@ export function LandingPage() {
           <div className="site-actions">
             <SettingsMenu />
             {user ? (
-              <Link className="button button-primary" to="/app">
-                {t('nav.openApp')}
-              </Link>
+              <>
+                <Link className="button button-primary" to="/app">
+                  {t('nav.openApp')}
+                </Link>
+                <UserMenu />
+              </>
             ) : (
               <>
                 <Link className="button button-ghost" to="/signin">
