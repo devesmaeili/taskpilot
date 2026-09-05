@@ -124,7 +124,7 @@ export function ModelPicker({
             <p className="model-picker-hint">{t(`chat.models.groupHints.${group}`)}</p>
           )}
 
-          {!isOpenRouterConfigured() && group !== 'gemini' ? (
+          {!isOpenRouterConfigured() ? (
             <p className="model-picker-warning">{t('chat.models.needOpenRouter')}</p>
           ) : null}
 
@@ -162,9 +162,7 @@ export function ModelPicker({
                     ) : null}
                     {!available ? (
                       <span className="model-picker-option-desc">
-                        {model.transport === 'gemini'
-                          ? t('chat.models.needGemini')
-                          : t('chat.models.needOpenRouter')}
+                        {t('chat.models.needOpenRouter')}
                       </span>
                     ) : null}
                   </button>

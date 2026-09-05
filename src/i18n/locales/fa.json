@@ -186,7 +186,7 @@
     "thinking": "در حال فکر کردن…",
     "you": "شما",
     "assistant": "TaskPilot",
-    "notConfigured": "VITE_GEMINI_API_KEY و/یا VITE_OPENROUTER_API_KEY را به فایل .env اضافه کنید، سپس سرور توسعه را دوباره اجرا کنید.",
+    "notConfigured": "VITE_OPENROUTER_API_KEY را به فایل .env اضافه کنید (از openrouter.ai)، سپس سرور توسعه را دوباره اجرا کنید.",
     "models": {
       "label": "مدل",
       "groupsLabel": "ارائه‌دهندگان هوش مصنوعی",
@@ -194,7 +194,6 @@
       "freeBadge": "رایگان",
       "loadingFree": "در حال بارگذاری مدل‌های رایگان…",
       "freeHint": "{{count}} مدل رایگان در دسترس است (فهرست نهایی).",
-      "needGemini": "به VITE_GEMINI_API_KEY نیاز دارد",
       "needOpenRouter": "به VITE_OPENROUTER_API_KEY از openrouter.ai نیاز دارد",
       "groups": {
         "chatgpt": "ChatGPT",
@@ -204,7 +203,7 @@
       },
       "groupHints": {
         "chatgpt": "مدل‌های ChatGPT از OpenAI از طریق OpenRouter.",
-        "gemini": "گوگل جمینای — کلید مستقیم یا OpenRouter.",
+        "gemini": "مدل‌های گوگل جمینای از طریق OpenRouter.",
         "claude": "مدل‌های Claude از Anthropic از طریق OpenRouter."
       }
     },

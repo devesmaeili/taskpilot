@@ -5,8 +5,6 @@ export type AiModel = {
   name: string
   group: ModelGroup
   description?: string
-  /** Uses Google AI Studio key directly instead of OpenRouter */
-  transport: 'gemini' | 'openrouter'
   free: boolean
 }
 
@@ -24,7 +22,6 @@ export const CURATED_MODELS: AiModel[] = [
     name: 'GPT-4o mini',
     group: 'chatgpt',
     description: 'Fast ChatGPT for everyday tasks',
-    transport: 'openrouter',
     free: false,
   },
   {
@@ -32,7 +29,6 @@ export const CURATED_MODELS: AiModel[] = [
     name: 'GPT-4o',
     group: 'chatgpt',
     description: 'Strong all-round ChatGPT model',
-    transport: 'openrouter',
     free: false,
   },
   {
@@ -40,23 +36,13 @@ export const CURATED_MODELS: AiModel[] = [
     name: 'GPT-4.1',
     group: 'chatgpt',
     description: 'Latest OpenAI flagship via OpenRouter',
-    transport: 'openrouter',
     free: false,
-  },
-  {
-    id: 'gemini-direct/gemini-3.6-flash',
-    name: 'Gemini 3.6 Flash',
-    group: 'gemini',
-    description: 'Google AI Studio (your Gemini key)',
-    transport: 'gemini',
-    free: true,
   },
   {
     id: 'google/gemini-2.5-flash',
     name: 'Gemini 2.5 Flash',
     group: 'gemini',
-    description: 'Gemini via OpenRouter',
-    transport: 'openrouter',
+    description: 'Fast Gemini via OpenRouter',
     free: false,
   },
   {
@@ -64,7 +50,13 @@ export const CURATED_MODELS: AiModel[] = [
     name: 'Gemini 2.5 Pro',
     group: 'gemini',
     description: 'Higher-quality Gemini via OpenRouter',
-    transport: 'openrouter',
+    free: false,
+  },
+  {
+    id: 'google/gemini-2.0-flash',
+    name: 'Gemini 2.0 Flash',
+    group: 'gemini',
+    description: 'Previous Gemini Flash via OpenRouter',
     free: false,
   },
   {
@@ -72,7 +64,6 @@ export const CURATED_MODELS: AiModel[] = [
     name: 'Claude 3.5 Haiku',
     group: 'claude',
     description: 'Fast Claude for quick answers',
-    transport: 'openrouter',
     free: false,
   },
   {
@@ -80,7 +71,6 @@ export const CURATED_MODELS: AiModel[] = [
     name: 'Claude Sonnet 4',
     group: 'claude',
     description: 'Balanced Claude model',
-    transport: 'openrouter',
     free: false,
   },
   {
@@ -88,7 +78,6 @@ export const CURATED_MODELS: AiModel[] = [
     name: 'Claude Opus 4',
     group: 'claude',
     description: 'Most capable Claude model',
-    transport: 'openrouter',
     free: false,
   },
 ]
@@ -99,49 +88,48 @@ export const FALLBACK_FREE_MODELS: AiModel[] = [
     id: 'google/gemma-3-27b-it:free',
     name: 'Gemma 3 27B',
     group: 'free',
-    transport: 'openrouter',
     free: true,
   },
   {
     id: 'meta-llama/llama-3.3-70b-instruct:free',
     name: 'Llama 3.3 70B',
     group: 'free',
-    transport: 'openrouter',
     free: true,
   },
   {
     id: 'deepseek/deepseek-r1:free',
     name: 'DeepSeek R1',
     group: 'free',
-    transport: 'openrouter',
     free: true,
   },
   {
     id: 'mistralai/mistral-small-3.1-24b-instruct:free',
     name: 'Mistral Small 3.1',
     group: 'free',
-    transport: 'openrouter',
     free: true,
   },
   {
     id: 'qwen/qwen3-32b:free',
     name: 'Qwen3 32B',
     group: 'free',
-    transport: 'openrouter',
     free: true,
   },
   {
     id: 'nvidia/llama-3.1-nemotron-ultra-253b-v1:free',
     name: 'Nemotron Ultra',
     group: 'free',
-    transport: 'openrouter',
     free: true,
   },
 ]
 
-export const DEFAULT_MODEL_ID = 'gemini-direct/gemini-3.6-flash'
+export const DEFAULT_MODEL_ID = 'google/gemini-2.5-flash'
 
 const SELECTED_MODEL_KEY = 'taskpilot-selected-model'
+
+/** Older local selections before OpenRouter-only. */
+const LEGACY_MODEL_IDS: Record<string, string> = {
+  'gemini-direct/gemini-3.6-flash': DEFAULT_MODEL_ID,
+}
 
 type OpenRouterModel = {
   id: string
@@ -181,7 +169,6 @@ export async function fetchFreeOpenRouterModels(): Promise<AiModel[]> {
         name: model.name?.replace(/\s*\(free\)/i, '').trim() || model.id,
         group: 'free',
         description: model.description,
-        transport: 'openrouter',
         free: true,
       }),
     )
@@ -190,27 +177,33 @@ export async function fetchFreeOpenRouterModels(): Promise<AiModel[]> {
   return models.length > 0 ? models : FALLBACK_FREE_MODELS
 }
 
+export function resolveModelId(modelId: string): string {
+  return LEGACY_MODEL_IDS[modelId] ?? modelId
+}
+
 export function findModel(
   modelId: string,
   freeModels: AiModel[] = FALLBACK_FREE_MODELS,
 ): AiModel | undefined {
+  const resolvedId = resolveModelId(modelId)
   return (
-    CURATED_MODELS.find((model) => model.id === modelId) ??
-    freeModels.find((model) => model.id === modelId) ??
-    FALLBACK_FREE_MODELS.find((model) => model.id === modelId)
+    CURATED_MODELS.find((model) => model.id === resolvedId) ??
+    freeModels.find((model) => model.id === resolvedId) ??
+    FALLBACK_FREE_MODELS.find((model) => model.id === resolvedId)
   )
 }
 
 export function loadSelectedModelId(): string {
   try {
-    return localStorage.getItem(SELECTED_MODEL_KEY) || DEFAULT_MODEL_ID
+    const stored = localStorage.getItem(SELECTED_MODEL_KEY) || DEFAULT_MODEL_ID
+    return resolveModelId(stored)
   } catch {
     return DEFAULT_MODEL_ID
   }
 }
 
 export function saveSelectedModelId(modelId: string) {
-  localStorage.setItem(SELECTED_MODEL_KEY, modelId)
+  localStorage.setItem(SELECTED_MODEL_KEY, resolveModelId(modelId))
 }
 
 export function modelsForGroup(

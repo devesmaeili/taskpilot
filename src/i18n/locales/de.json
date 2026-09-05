@@ -186,7 +186,7 @@
     "thinking": "Denkt nach…",
     "you": "Sie",
     "assistant": "TaskPilot",
-    "notConfigured": "Fügen Sie VITE_GEMINI_API_KEY und/oder VITE_OPENROUTER_API_KEY in Ihre .env-Datei ein und starten Sie den Dev-Server neu.",
+    "notConfigured": "Fügen Sie VITE_OPENROUTER_API_KEY in Ihre .env-Datei ein (von openrouter.ai) und starten Sie den Dev-Server neu.",
     "models": {
       "label": "Modell",
       "groupsLabel": "KI-Anbieter",
@@ -194,7 +194,6 @@
       "freeBadge": "Kostenlos",
       "loadingFree": "Kostenlose Modelle werden geladen…",
       "freeHint": "{{count}} kostenlose Modelle verfügbar (finaler Katalog).",
-      "needGemini": "Benötigt VITE_GEMINI_API_KEY",
       "needOpenRouter": "Benötigt VITE_OPENROUTER_API_KEY von openrouter.ai",
       "groups": {
         "chatgpt": "ChatGPT",
@@ -204,7 +203,7 @@
       },
       "groupHints": {
         "chatgpt": "OpenAI ChatGPT-Modelle über OpenRouter.",
-        "gemini": "Google Gemini — direkter Schlüssel oder OpenRouter.",
+        "gemini": "Google Gemini-Modelle über OpenRouter.",
         "claude": "Anthropic Claude-Modelle über OpenRouter."
       }
     },

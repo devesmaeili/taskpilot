@@ -1,5 +1,5 @@
 import type { ChatMessage } from './client'
-import { DEFAULT_MODEL_ID } from './models'
+import { DEFAULT_MODEL_ID, resolveModelId } from './models'
 
 export type Conversation = {
   id: string
@@ -18,7 +18,7 @@ function storageKey(userId: string) {
 function normalizeConversation(value: Conversation): Conversation {
   return {
     ...value,
-    modelId: value.modelId || DEFAULT_MODEL_ID,
+    modelId: resolveModelId(value.modelId || DEFAULT_MODEL_ID),
     messages: Array.isArray(value.messages) ? value.messages : [],
   }
 }
